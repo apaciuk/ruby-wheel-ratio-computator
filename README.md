@@ -1,6 +1,6 @@
 # ruby-wheel-data-program
 
-* An interactive wheel data program
+* An interactive wheel data program, expansion of gear app
 
 ## Getting Started
 

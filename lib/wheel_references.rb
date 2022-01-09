@@ -1,12 +1,10 @@
 # frozen_string_literal: true
 
-require 'pp'
-
 class WheelReferences
   attr_reader :wheels
 
   def initialize(data)
-    @wheels = wheelify(data)
+    @wheels = wheel(data)
   end
 
   def diameters
@@ -16,7 +14,7 @@ class WheelReferences
   end
 
   Wheel = Struct.new(:rim, :tyre)
-  def wheelify(data)
+  def wheel(data)
     data.collect { |cell| Wheel.new(cell[0], cell[1]) }
   end
 end
